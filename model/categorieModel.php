@@ -2,23 +2,23 @@
 
 require_once('./model/db.php');
 
-function getAll(){
+function getAllCategories() {
     global $connexion;
-    $sql ="SELECT * FROM categorie";
-    return pg_query($connexion,$sql);
+    $sql = "SELECT * FROM categorie";
+    return pg_query($connexion, $sql);
 }
 
-function delete($id){
+
+function deleteCategorie($id) { // Renommée
     global $connexion;
-    $sql ="DELETE FROM categorie WHERE id =$id";
-   return pg_query($connexion,$sql);
+    $sql = "DELETE FROM categorie WHERE id = $id";
+    return pg_query($connexion, $sql);
 }
 
-function add($libelle){
+function addCategorie($libelle) { // Renommée
     global $connexion;
-    $sql ="INSERT INTO categorie (libelle) values
-     ('$libelle')";
-   return pg_query($connexion,$sql);
+    $sql = "INSERT INTO categorie (libelle) VALUES ('$libelle')";
+    return pg_query($connexion, $sql);
 }
 
 function updateCategorie($id,$libelle){
@@ -27,7 +27,7 @@ function updateCategorie($id,$libelle){
    return pg_query($connexion,$sql);
 }
 
-function getById($id){
+function getCategorieById($id){
     global $connexion;
     $sql ="SELECT * FROM categorie where id = $id";
     return pg_query($connexion,$sql);

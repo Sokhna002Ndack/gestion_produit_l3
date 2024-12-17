@@ -1,3 +1,5 @@
+
+
 <form action="?controller=categorie&&action=update" method="POST">
     <input type="text" name="id" value=<?= $categorie['id']?> hidden><br>
     <label for="">Libelle</label>

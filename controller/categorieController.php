@@ -2,13 +2,13 @@
     require_once('./model/categorieModel.php');
 
      function index(){
-        $categories = getAll();
+        $categories = getAllCategories();
         require_once './view/categorie/list.php';
      }
 
      function remove(){
       $id = $_GET['id'];
-      delete($id);
+      deleteCategorie($id);
       header('location:index.php?controller=categorie');
       }
 
@@ -18,13 +18,13 @@
 
      function save(){
       $libelle =$_POST['libelle'];
-      add($libelle);
+      addCategorie($libelle);
       header('location:index.php?controller=categorie');
       }
 
       function getCategorie(){
          $id = $_GET['id'];
-         $categorie = pg_fetch_assoc(getById($id)); 
+         $categorie = pg_fetch_assoc(getCategorieById($id)); 
          require_once './view/categorie/edit.php';
       }
 

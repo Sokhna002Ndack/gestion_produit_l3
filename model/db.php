@@ -1,10 +1,9 @@
 <?php
 
-
 $serveur="localhost";
 $port = "5432";
 $user="postgres";
-$pwd="passer";
+$pwd="Sokhn@0.2";
 $dbname="l3_iage_2024";
 
 $connexion = pg_connect("host=$serveur port=$port dbname=$dbname user=$user password=$pwd");
@@ -12,7 +11,7 @@ $connexion = pg_connect("host=$serveur port=$port dbname=$dbname user=$user pass
 if(!$connexion){
     echo "Erreur de connexion";
 }else{
-   echo "succes";
+
 }
 
 
